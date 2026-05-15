@@ -17,7 +17,10 @@ import type {
   WorkitemAction,
 } from './types';
 
-const API_BASE = import.meta.env.VITE_API_BASE ?? 'http://localhost:8000';
+const API_BASE =
+  (typeof window !== 'undefined' && (window as unknown as { __API_BASE__?: string }).__API_BASE__) ||
+  import.meta.env.VITE_API_BASE ||
+  'http://localhost:8000';
 const TOKEN_KEY = 'newera_demo_token';
 const DEFAULT_TOKEN = 'demo-owner';
 

@@ -1,0 +1,95 @@
+# ============================================================================
+# PMO 智能座舱 — 单机一键部署
+# 用法：
+#   1. cp .env.example .env  并填入飞书凭证（可选，不填则降级为本地 mock 模式）
+#   2. docker compose up -d
+#   3. 访问 http://localhost:3000
+# ============================================================================
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: pmo-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-pmo}
+      POSTGRES_USER: ${POSTGRES_USER:-pmo}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-pmo_dev_password}
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-pmo} -d ${POSTGRES_DB:-pmo}"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    container_name: pmo-redis
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: pmo-cockpit/backend:latest
+    container_name: pmo-backend
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      # ---------- 持久化 ----------
+      NEWERA_STATE_STORE_MODE: ${NEWERA_STATE_STORE_MODE:-postgres}
+      NEWERA_POSTGRES_DSN: postgresql://${POSTGRES_USER:-pmo}:${POSTGRES_PASSWORD:-pmo_dev_password}@postgres:5432/${POSTGRES_DB:-pmo}
+      NEWERA_QUEUE_PROVIDER: ${NEWERA_QUEUE_PROVIDER:-redis}
+      NEWERA_REDIS_URL: redis://redis:6379/0
+      NEWERA_SNAPSHOT_KEY: ${NEWERA_SNAPSHOT_KEY:-default}
+      # ---------- 飞书集成（可选） ----------
+      NEWERA_LARK_APP_ID: ${LARK_APP_ID:-}
+      NEWERA_LARK_APP_SECRET: ${LARK_APP_SECRET:-}
+      NEWERA_LARK_BOT_WEBHOOK_URL: ${LARK_BOT_WEBHOOK_URL:-}
+      NEWERA_LARK_TASK_WEBHOOK_URL: ${LARK_TASK_WEBHOOK_URL:-}
+      NEWERA_LARK_TASKLIST_GUID: ${LARK_TASKLIST_GUID:-}
+      NEWERA_LARK_DOC_FOLDER_TOKEN: ${LARK_DOC_FOLDER_TOKEN:-}
+      NEWERA_DELIVERY_PROVIDER: ${NEWERA_DELIVERY_PROVIDER:-local}
+      NEWERA_NOTIFICATION_PROVIDER: ${NEWERA_NOTIFICATION_PROVIDER:-local}
+      NEWERA_OPS_TASK_PROVIDER: ${NEWERA_OPS_TASK_PROVIDER:-local}
+      # ---------- 跨域 ----------
+      NEWERA_CORS_ORIGINS: ${NEWERA_CORS_ORIGINS:-http://localhost:3000,http://127.0.0.1:3000}
+      # ---------- 启动严格模式（飞书凭证未填时建议 false） ----------
+      NEWERA_STARTUP_STRICT: ${NEWERA_STARTUP_STRICT:-false}
+    volumes:
+      - backend_data:/data
+    ports:
+      - "${BACKEND_PORT:-8000}:8000"
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: pmo-cockpit/frontend:latest
+    container_name: pmo-frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    environment:
+      # 浏览器侧的 API base，默认指向宿主机的 backend 端口
+      API_BASE: ${PUBLIC_API_BASE:-http://localhost:8000}
+    ports:
+      - "${FRONTEND_PORT:-3000}:80"
+
+volumes:
+  pg_data:
+  redis_data:
+  backend_data:

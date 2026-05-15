@@ -1,0 +1,10 @@
+# 后端 Docker 构建忽略
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.venv/
+.env
+.env.*
+tests/
+*.md
