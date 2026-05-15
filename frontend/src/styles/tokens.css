@@ -1,0 +1,51 @@
+:root {
+  /* =====================================================
+     Editorial Mission Control — Design Tokens
+     ===================================================== */
+
+  /* Warm paper canvas */
+  --bg-app: #f5efe6;
+  --bg-card: #fbf7ef;
+  --bg-card-soft: #f1eadc;
+  --bg-elev: rgba(251, 247, 239, 0.86);
+  --bg-stripe: #efe6d5;
+  --bg-ink: #161311;
+
+  /* Hairlines & rules */
+  --border: #d8cdb8;
+  --border-strong: #b9aa8a;
+  --divider: #e1d6c0;
+  --rule: #1a1612;
+
+  /* Ink palette */
+  --text-primary: #1a1612;
+  --text-secondary: #5b5246;
+  --text-tertiary: #8a8170;
+  --text-on-ink: #f5efe6;
+
+  /* Vermillion brand + semantic accents */
+  --accent-blue: #284b78;          /* deep navy (kept name for compatibility) */
+  --accent-blue-soft: #e2e7f0;
+  --accent-green: #4f7a3f;          /* moss */
+  --accent-orange: #c0631c;         /* burnt amber */
+  --accent-red: #b8392f;            /* vermillion (brand) */
+  --accent-purple: #6e3a73;         /* aubergine */
+  --accent-pink: #c44d6f;
+  --accent-amber: #c79a1a;
+
+  /* Geometry — flatter, editorial */
+  --radius-card: 4px;
+  --radius-soft: 3px;
+  --radius-pill: 2px;
+
+  /* Shadows — subtle, paper-like */
+  --shadow-card: 0 1px 0 rgba(26, 22, 18, 0.04), 0 14px 28px -22px rgba(26, 22, 18, 0.18);
+  --shadow-pop: 0 22px 60px -18px rgba(26, 22, 18, 0.36);
+  --shadow-inset-rule: inset 0 -1px 0 var(--rule);
+
+  /* Typography stack */
+  --font-display: 'Fraunces', 'Source Serif Pro', 'Songti SC', 'Noto Serif SC', Georgia, serif;
+  --font-sans: 'IBM Plex Sans', 'IBM Plex Sans SC', 'PingFang SC', -apple-system, BlinkMacSystemFont,
+    'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', 'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace;
+}
