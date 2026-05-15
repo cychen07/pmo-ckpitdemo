@@ -1,0 +1,475 @@
+backend/app/main.py
+  d572c56715738240 158-162,165-166 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a06d9aa84cf7cace402ed7d","tool_type":"agent","tool_id":"Write","line_ranges":[{"Range":[158,162]},{"Range":[165,166]}]}]}
+backend/Dockerfile
+  d572c56715738240 1-56 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a06d9aa84cf7cace402ed7d","tool_type":"agent","tool_id":"Write","line_ranges":[{"Range":[1,56]}]}]}
+frontend/.dockerignore
+  d572c56715738240 1-7 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a06d9aa84cf7cace402ed7d","tool_type":"agent","tool_id":"Write","line_ranges":[{"Range":[1,7]}]}]}
+frontend/src/api.ts
+  d572c56715738240 20-23 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a06d9aa84cf7cace402ed7d","tool_type":"agent","tool_id":"Write","line_ranges":[{"Range":[20,23]}]}]}
+docker-compose.yml
+  d572c56715738240 1-95 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a06d9aa84cf7cace402ed7d","tool_type":"agent","tool_id":"Write","line_ranges":[{"Range":[1,95]}]}]}
+.env.example
+  d572c56715738240 1-42 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a06d9aa84cf7cace402ed7d","tool_type":"agent","tool_id":"Write","line_ranges":[{"Range":[1,42]}]}]}
+frontend/index.html
+  d572c56715738240 16 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a06d9aa84cf7cace402ed7d","tool_type":"agent","tool_id":"Write","line_ranges":[{"Single":16}]}]}
+backend/.dockerignore
+  d572c56715738240 1-10 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a06d9aa84cf7cace402ed7d","tool_type":"agent","tool_id":"Write","line_ranges":[{"Range":[1,10]}]}]}
+README.md
+  d572c56715738240 1,3,5-94,99-102,110-120,123,125-135,137,139-151,154-155,157-160 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a06d9aa84cf7cace402ed7d","tool_type":"agent","tool_id":"Write","line_ranges":[{"Single":1},{"Single":3},{"Range":[5,94]},{"Range":[99,102]},{"Range":[110,120]},{"Single":123},{"Range":[125,135]},{"Single":137},{"Range":[139,151]},{"Range":[154,155]},{"Range":[157,160]}]}]}
+frontend/public/config.js
+  d572c56715738240 1-2 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a06d9aa84cf7cace402ed7d","tool_type":"agent","tool_id":"Write","line_ranges":[{"Range":[1,2]}]}]}
+frontend/Dockerfile
+  d572c56715738240 1-73 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a06d9aa84cf7cace402ed7d","tool_type":"agent","tool_id":"Write","line_ranges":[{"Range":[1,73]}]}]}
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.4",
+  "base_commit_sha": "62ea0e398edd9c4c64c24319c6eb529829989b67",
+  "prompts": {
+    "d572c56715738240": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a055f9d84cf7cace402eb21",
+        "model": "openrouter-2o__dev"
+      },
+      "human_author": "cychen07 <cychen07@users.noreply.github.com>",
+      "messages": [],
+      "total_additions": 436,
+      "total_deletions": 22,
+      "accepted_lines": 436,
+      "overriden_lines": 0
+    }
+  },
+  "attestation_metadata": {
+    ".env.example": [
+      {
+        "hash": "d572c56715738240",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              42
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a06d9aa84cf7cace402ed7d",
+            "tool_type": "agent",
+            "tool_id": "Write",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  42
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "README.md": [
+      {
+        "hash": "d572c56715738240",
+        "line_ranges": [
+          {
+            "Single": 1
+          },
+          {
+            "Single": 3
+          },
+          {
+            "Range": [
+              5,
+              94
+            ]
+          },
+          {
+            "Range": [
+              99,
+              102
+            ]
+          },
+          {
+            "Range": [
+              110,
+              120
+            ]
+          },
+          {
+            "Single": 123
+          },
+          {
+            "Range": [
+              125,
+              135
+            ]
+          },
+          {
+            "Single": 137
+          },
+          {
+            "Range": [
+              139,
+              151
+            ]
+          },
+          {
+            "Range": [
+              154,
+              155
+            ]
+          },
+          {
+            "Range": [
+              157,
+              160
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a06d9aa84cf7cace402ed7d",
+            "tool_type": "agent",
+            "tool_id": "Write",
+            "line_ranges": [
+              {
+                "Single": 1
+              },
+              {
+                "Single": 3
+              },
+              {
+                "Range": [
+                  5,
+                  94
+                ]
+              },
+              {
+                "Range": [
+                  99,
+                  102
+                ]
+              },
+              {
+                "Range": [
+                  110,
+                  120
+                ]
+              },
+              {
+                "Single": 123
+              },
+              {
+                "Range": [
+                  125,
+                  135
+                ]
+              },
+              {
+                "Single": 137
+              },
+              {
+                "Range": [
+                  139,
+                  151
+                ]
+              },
+              {
+                "Range": [
+                  154,
+                  155
+                ]
+              },
+              {
+                "Range": [
+                  157,
+                  160
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "backend/.dockerignore": [
+      {
+        "hash": "d572c56715738240",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              10
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a06d9aa84cf7cace402ed7d",
+            "tool_type": "agent",
+            "tool_id": "Write",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  10
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "backend/Dockerfile": [
+      {
+        "hash": "d572c56715738240",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              56
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a06d9aa84cf7cace402ed7d",
+            "tool_type": "agent",
+            "tool_id": "Write",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  56
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "backend/app/main.py": [
+      {
+        "hash": "d572c56715738240",
+        "line_ranges": [
+          {
+            "Range": [
+              158,
+              162
+            ]
+          },
+          {
+            "Range": [
+              165,
+              166
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a06d9aa84cf7cace402ed7d",
+            "tool_type": "agent",
+            "tool_id": "Write",
+            "line_ranges": [
+              {
+                "Range": [
+                  158,
+                  162
+                ]
+              },
+              {
+                "Range": [
+                  165,
+                  166
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "docker-compose.yml": [
+      {
+        "hash": "d572c56715738240",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              95
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a06d9aa84cf7cace402ed7d",
+            "tool_type": "agent",
+            "tool_id": "Write",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  95
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "frontend/.dockerignore": [
+      {
+        "hash": "d572c56715738240",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              7
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a06d9aa84cf7cace402ed7d",
+            "tool_type": "agent",
+            "tool_id": "Write",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  7
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "frontend/Dockerfile": [
+      {
+        "hash": "d572c56715738240",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              73
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a06d9aa84cf7cace402ed7d",
+            "tool_type": "agent",
+            "tool_id": "Write",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  73
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "frontend/index.html": [
+      {
+        "hash": "d572c56715738240",
+        "line_ranges": [
+          {
+            "Single": 16
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a06d9aa84cf7cace402ed7d",
+            "tool_type": "agent",
+            "tool_id": "Write",
+            "line_ranges": [
+              {
+                "Single": 16
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "frontend/public/config.js": [
+      {
+        "hash": "d572c56715738240",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              2
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a06d9aa84cf7cace402ed7d",
+            "tool_type": "agent",
+            "tool_id": "Write",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  2
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "frontend/src/api.ts": [
+      {
+        "hash": "d572c56715738240",
+        "line_ranges": [
+          {
+            "Range": [
+              20,
+              23
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a06d9aa84cf7cace402ed7d",
+            "tool_type": "agent",
+            "tool_id": "Write",
+            "line_ranges": [
+              {
+                "Range": [
+                  20,
+                  23
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "remote_transcripts": {
+    "d572c56715738240": {
+      "tool": "trae",
+      "conversation_id": "6a055f9d84cf7cace402eb21",
+      "session_id": "6a055f9d84cf7cace402eb21",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    }
+  }
+}
