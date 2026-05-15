@@ -1,0 +1,63 @@
+.github/workflows/ci.yml
+  d572c56715738240 1-114 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a06da8d84cf7cace402eda5","tool_type":"agent","tool_id":"Write","line_ranges":[{"Range":[1,114]}]}]}
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.4",
+  "base_commit_sha": "68d09cf8da23ea4c3eed63baacbe5bb1fcdc3544",
+  "prompts": {
+    "d572c56715738240": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a055f9d84cf7cace402eb21",
+        "model": "openrouter-2o__dev"
+      },
+      "human_author": "cychen07 <cychen07@users.noreply.github.com>",
+      "messages": [],
+      "total_additions": 114,
+      "total_deletions": 0,
+      "accepted_lines": 114,
+      "overriden_lines": 0
+    }
+  },
+  "attestation_metadata": {
+    ".github/workflows/ci.yml": [
+      {
+        "hash": "d572c56715738240",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              114
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a06da8d84cf7cace402eda5",
+            "tool_type": "agent",
+            "tool_id": "Write",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  114
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "remote_transcripts": {
+    "d572c56715738240": {
+      "tool": "trae",
+      "conversation_id": "6a055f9d84cf7cace402eb21",
+      "session_id": "6a055f9d84cf7cace402eb21",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    }
+  }
+}
